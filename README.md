@@ -15,4 +15,4 @@ Projeto de análise de dados desenvolvido com Python e Streamlit.
 - Plotly
 
 ## 📎 Acesse o projeto online
-(link do streamlit aqui futuramente)
+(link do streamlit aqui futuramente).
