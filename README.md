@@ -1,4 +1,4 @@
-### 📊 Dashboard de Vendas (versão 2024.2)
+### 📊 Dashboard Interativo (versão 2024.2)
 
 Dashboard interativo desenvolvido com **Python**, **Pandas**, **Streamlit** e **Plotly**, pensado para quem precisa analisar rapidamente os resultados comerciais e gerar insights acionáveis.
 
