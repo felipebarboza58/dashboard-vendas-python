@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# CSS customizado para deixar mais bonito
+# CSS customizado com melhor contraste para tema escuro
 st.markdown("""
     <style>
     .main-header {
@@ -22,19 +22,65 @@ st.markdown("""
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0.5rem;
+        padding: 1rem 0;
     }
     .sub-header {
         font-size: 1.3rem;
         text-align: center;
-        color: #666;
+        color: #a0a0a0;
         margin-bottom: 2rem;
     }
     .info-box {
-        background-color: #f0f2f6;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 2rem;
+        border-radius: 15px;
+        margin: 1.5rem 0;
+        box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+    }
+    .info-box h3 {
+        color: #ffffff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+    .info-box ol {
+        color: #ffffff;
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+    .info-box li {
+        margin-bottom: 0.5rem;
+    }
+    .info-box li strong {
+        color: #ffd700;
+        font-weight: bold;
+    }
+    .info-box p {
+        color: #ffffff;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 0.8rem;
+        border-radius: 8px;
+        border-left: 4px solid #ffd700;
+    }
+    .feature-card {
+        background-color: rgba(102, 126, 234, 0.1);
+        border: 2px solid #667eea;
         padding: 1.5rem;
-        border-radius: 10px;
-        border-left: 5px solid #667eea;
-        margin: 1rem 0;
+        border-radius: 12px;
+        text-align: center;
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+    }
+    .feature-card h3 {
+        color: #667eea;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -44,7 +90,7 @@ st.markdown('<p class="main-header">📊 Crie seu Dashboard Interativo</p>', uns
 st.markdown('<p class="sub-header">Transforme seus dados em visualizações profissionais em segundos!</p>',
             unsafe_allow_html=True)
 
-# Introdução
+# Introdução com melhor contraste
 with st.container():
     st.markdown("""
     <div class="info-box">
@@ -292,28 +338,36 @@ if uploaded_file is not None:
         st.info("💡 Verifique se o arquivo está no formato correto e tente novamente.")
 
 else:
-    # Tela inicial quando não há arquivo
+    # Tela inicial quando não há arquivo - Cards com melhor visual
     st.markdown("---")
+
     col1, col2, col3 = st.columns(3)
 
     with col1:
         st.markdown("""
-        ### 📊 Múltiplos Gráficos
-        Visualize seus dados em barras, linhas, pizza e muito mais!
-        """)
+        <div class="feature-card">
+            <h3>📊 Múltiplos Gráficos</h3>
+            <p>Visualize seus dados em barras, linhas, pizza e muito mais!</p>
+        </div>
+        """, unsafe_allow_html=True)
 
     with col2:
         st.markdown("""
-        ### ⚡ Análise Rápida
-        Estatísticas automáticas e insights em segundos!
-        """)
+        <div class="feature-card">
+            <h3>⚡ Análise Rápida</h3>
+            <p>Estatísticas automáticas e insights em segundos!</p>
+        </div>
+        """, unsafe_allow_html=True)
 
     with col3:
         st.markdown("""
-        ### 🎯 Fácil de Usar
-        Sem código, sem complicação. Só fazer upload!
-        """)
+        <div class="feature-card">
+            <h3>🎯 Fácil de Usar</h3>
+            <p>Sem código, sem complicação. Só fazer upload!</p>
+        </div>
+        """, unsafe_allow_html=True)
 
     st.markdown("---")
     st.info("👈 **Comece agora!** Faça upload do seu arquivo Excel na barra lateral")
+
 
