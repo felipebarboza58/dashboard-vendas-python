@@ -15,8 +15,5 @@ Projeto de análise de dados desenvolvido com Python e Streamlit.
 - Plotly
 
 ##  Acesse o projeto online
-<<<<<<< HEAD
-https://dashboardsdadospy.streamlit.app
-=======
 https://dashboardsdadospy.streamlit.app/
->>>>>>> 304e079 (Adiciona upload de XLSX e novos gráficos ao dashboard)
+
